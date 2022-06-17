@@ -18,7 +18,7 @@ Public Class FormUser
 
     Private Sub FormUser_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Call RelodData()
-        DataGridView1.DataSource = (Ds.Tables("tbl_user"))
+        DataGridView1.DataSource = (Ds.Tables("tbl_use"))
         DataGridView1.Columns(1).Width = 180
         DataGridView1.Columns(2).Width = 120
 
@@ -26,16 +26,16 @@ Public Class FormUser
     End Sub
     Sub OpenGrid()
         Call OpenConn()
-        Da = New MySqlDataAdapter("select * from tbl_user", Conn)
+        Da = New MySqlDataAdapter("select * from tbl_use", Conn)
         Ds = New DataSet
-        Da.Fill(Ds, "tbl_user")
-        DataGridView1.DataSource = Ds.Tables("tbl_user")
+        Da.Fill(Ds, "tbl_use")
+        DataGridView1.DataSource = Ds.Tables("tbl_use")
         DataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.Silver
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Call OpenConn()
-        Dim InputData As String = "insert into tbl_user (Kode_User, Nama_User, Password_User, Setatus_User) values ('" & TxtCode.Text & "','" & TxtNama.Text & "','" & TxtPass.Text & "','" & CmbStatus.Text & "')"
+        Dim InputData As String = "insert into tbl_use (Kode_User, Nama_User, Password_User, Setatus_User) values ('" & TxtCode.Text & "','" & TxtNama.Text & "','" & TxtPass.Text & "','" & CmbStatus.Text & "')"
         Cmd = New MySqlCommand(InputData, Conn)
         Cmd.ExecuteNonQuery()
         MsgBox("Input Data Berhasil !")
@@ -44,7 +44,7 @@ Public Class FormUser
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Call OpenConn()
-        Dim Edit As String = "Update tbll_user set Nama_User='" & TxtNama.Text & "',Pwd_User  = '" & TxtPass.Text & "',Status_User = '" & CmbStatus.Text & "'where Kode_User ='" & TxtCode.Text & "'"
+        Dim Edit As String = "Update tbl_use set Nama_User='" & TxtNama.Text & "',Password_User  = '" & TxtPass.Text & "',Setatus_User = '" & CmbStatus.Text & "'where Kode_User ='" & TxtCode.Text & "'"
         Cmd = New MySqlCommand(Edit, Conn)
         Cmd.ExecuteNonQuery()
         MsgBox("EDIT DATA BERHASIL !")
@@ -56,7 +56,7 @@ Public Class FormUser
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         Call OpenConn()
-        Dim Hapus As String = "Delete From tbl_user Where Kode_User='" & TxtCode.Text & "'"
+        Dim Hapus As String = "Delete From tbl_use Where Kode_User='" & TxtCode.Text & "'"
         Cmd = New MySqlCommand(Hapus, Conn)
         Cmd.ExecuteNonQuery()
         MsgBox("DATA BERHASIL DI HAPUS", MsgBoxStyle.Information, "INFORMATION")
@@ -72,7 +72,7 @@ Public Class FormUser
     Private Sub TxtCode_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtCode.KeyPress
         If e.KeyChar = Chr(13) Then
             Call OpenConn()
-            Cmd = New MySqlCommand("Select * from tbl_user where Nama_User='" & TxtNama.Text & "'", Conn)
+            Cmd = New MySqlCommand("Select * from tbl_use where Kode_User='" & TxtCode.Text & "'", Conn)
             Rd = Cmd.ExecuteReader
             Rd.Read()
             If Not Rd.HasRows Then

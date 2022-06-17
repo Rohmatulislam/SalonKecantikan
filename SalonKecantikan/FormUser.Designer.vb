@@ -103,7 +103,7 @@ Partial Class FormUser
         'TxtPass
         '
         Me.TxtPass.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtPass.Location = New System.Drawing.Point(152, 197)
+        Me.TxtPass.Location = New System.Drawing.Point(164, 197)
         Me.TxtPass.Name = "TxtPass"
         Me.TxtPass.Size = New System.Drawing.Size(257, 28)
         Me.TxtPass.TabIndex = 3

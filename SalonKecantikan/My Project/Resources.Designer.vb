@@ -63,6 +63,16 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property _03_image_1580686013_5e375abdda143() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("03-image_1580686013_5e375abdda143", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property _238295() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("238295", resourceCulture)
@@ -106,6 +116,26 @@ Namespace My.Resources
         Friend ReadOnly Property icon_pendaftaran_png__1_() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("icon-pendaftaran-png (1)", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property il_570xN_2203143368_f9zq() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("il_570xN.2203143368_f9zq", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property istockphoto_1096336230_1024x1024() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("istockphoto-1096336230-1024x1024", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

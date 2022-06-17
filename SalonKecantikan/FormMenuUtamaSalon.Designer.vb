@@ -138,7 +138,9 @@ Partial Class FormMenuUtamaSalon
         Me.ClientSize = New System.Drawing.Size(905, 843)
         Me.Controls.Add(Me.ToolStrip1)
         Me.Name = "FormMenuUtamaSalon"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FormMenuUtamaSalon"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.ToolStrip1.ResumeLayout(False)
         Me.ToolStrip1.PerformLayout()
         Me.ResumeLayout(False)
