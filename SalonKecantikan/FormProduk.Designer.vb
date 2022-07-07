@@ -113,7 +113,7 @@ Partial Class FormProduk
         Me.BtnTutup.Name = "BtnTutup"
         Me.BtnTutup.Size = New System.Drawing.Size(100, 49)
         Me.BtnTutup.TabIndex = 9
-        Me.BtnTutup.Text = "Button4"
+        Me.BtnTutup.Text = "Tutup"
         Me.BtnTutup.UseVisualStyleBackColor = True
         '
         'BtnHapus
@@ -122,7 +122,7 @@ Partial Class FormProduk
         Me.BtnHapus.Name = "BtnHapus"
         Me.BtnHapus.Size = New System.Drawing.Size(100, 49)
         Me.BtnHapus.TabIndex = 8
-        Me.BtnHapus.Text = "BtnHapus"
+        Me.BtnHapus.Text = "Hapus"
         Me.BtnHapus.UseVisualStyleBackColor = True
         '
         'BtnEdit
@@ -131,7 +131,7 @@ Partial Class FormProduk
         Me.BtnEdit.Name = "BtnEdit"
         Me.BtnEdit.Size = New System.Drawing.Size(100, 49)
         Me.BtnEdit.TabIndex = 7
-        Me.BtnEdit.Text = "BtnEdit"
+        Me.BtnEdit.Text = "Edit"
         Me.BtnEdit.UseVisualStyleBackColor = True
         '
         'BtnSimpan
@@ -140,7 +140,7 @@ Partial Class FormProduk
         Me.BtnSimpan.Name = "BtnSimpan"
         Me.BtnSimpan.Size = New System.Drawing.Size(100, 49)
         Me.BtnSimpan.TabIndex = 6
-        Me.BtnSimpan.Text = "BtnSimpan"
+        Me.BtnSimpan.Text = "Simpan"
         Me.BtnSimpan.UseVisualStyleBackColor = True
         '
         'CmbSatuan

@@ -3,7 +3,7 @@ Public Class FormProduk
     Sub ReloadData()
         TxtHarga.Text = ""
         TxtStok.Text = ""
-        TxtKode.Text = ""
+        TxtNama.Text = ""
         TxtKode.Text = ""
         TxtStok.Text = ""
         CmbSatuan.Text = ""
@@ -25,17 +25,17 @@ Public Class FormProduk
     End Sub
     Sub OpenGrid()
         Call OpenConn()
-        Da = New MySqlDataAdapter("select * from tblproduk", Conn)
+        Da = New MySqlDataAdapter("select * from tbl_produk", Conn)
         Ds = New DataSet
-        Da.Fill(Ds, "tblproduk")
-        DgvProduk.DataSource = Ds.Tables("tblproduk")
+        Da.Fill(Ds, "tbl_produk")
+        DgvProduk.DataSource = Ds.Tables("tbl_produk")
         DgvProduk.AlternatingRowsDefaultCellStyle.BackColor = Color.Silver
     End Sub
 
     Private Sub BtnSimpan_Click(sender As Object, e As EventArgs) Handles BtnSimpan.Click
 
         Call OpenConn()
-        Dim InputData As String = "insert into tblproduk (Kode_Produk, Nama_Produk, Satuan_Produk, Harga_produk, Stok_produk) values ('" & TxtKode.Text & "','" & TxtNama.Text & "','" & CmbSatuan.Text & "','" & TxtHarga.Text & "','" & TxtStok.Text & "')"
+        Dim InputData As String = "insert into tbl_produk (Kode_Produk, Nama_Produk, Satuan_Produk, Harga_produk, Stok_Produk, Status_Produk) values ('" & TxtKode.Text & "','" & TxtNama.Text & "','" & CmbSatuan.Text & "','" & TxtHarga.Text & "','" & TxtStok.Text & "','AKTIF')"
         Cmd = New MySqlCommand(InputData, Conn)
         Cmd.ExecuteNonQuery()
         MsgBox("Input Data Berhasil !")
@@ -48,7 +48,7 @@ Public Class FormProduk
     Private Sub TxtKode_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtKode.KeyPress
         If e.KeyChar = Chr(13) Then
             Call OpenConn()
-            Cmd = New MySqlCommand("Select * from tblproduk where Kode_Produk='" & TxtKode.Text & "'", Conn)
+            Cmd = New MySqlCommand("Select * from tbl_produk where Kode_Produk='" & TxtKode.Text & "'", Conn)
             Rd = Cmd.ExecuteReader
             Rd.Read()
             If Not Rd.HasRows Then
@@ -65,7 +65,7 @@ Public Class FormProduk
 
     Private Sub BtnHapus_Click(sender As Object, e As EventArgs) Handles BtnHapus.Click
         Call OpenConn()
-        Dim Hapus As String = "Delete From tblproduk Where Kode_Produk='" & TxtKode.Text & "'"
+        Dim Hapus As String = "Delete From tbl_produk Where Kode_Produk='" & TxtKode.Text & "'"
         Cmd = New MySqlCommand(Hapus, Conn)
         Cmd.ExecuteNonQuery()
         MsgBox("DATA BERHASIL DI HAPUS", MsgBoxStyle.Information, "INFORMATION")
@@ -74,7 +74,7 @@ Public Class FormProduk
 
     Private Sub BtnEdit_Click(sender As Object, e As EventArgs) Handles BtnEdit.Click
         Call OpenConn()
-        Dim Edit As String = "Update tblproduk set Nama_Produk='" & TxtNama.Text & "', Harga_Produk = '" & TxtHarga.Text & "',Satuan_Produk = '" & CmbSatuan.Text & "',Stok_Produk = '" & TxtStok.Text & "'where Kode_Produk ='" & TxtKode.Text & "'"
+        Dim Edit As String = "Update tbl_produk set Nama_Produk='" & TxtNama.Text & "', Harga_Produk = '" & TxtHarga.Text & "',Satuan_Produk = '" & CmbSatuan.Text & "',Stok_Produk = '" & TxtStok.Text & "'where Kode_Produk ='" & TxtKode.Text & "'"
         Cmd = New MySqlCommand(Edit, Conn)
         Cmd.ExecuteNonQuery()
         MsgBox("EDIT DATA BERHASIL !")
@@ -87,12 +87,12 @@ Public Class FormProduk
 
     Private Sub BtnCari_Click(sender As Object, e As EventArgs) Handles BtnCari.Click
         Call OpenConn()
-        Cmd = New MySqlCommand("Select * From tblproduk Where Nama_Produk like'%" & TxtCari.Text & "%'", Conn)
+        Cmd = New MySqlCommand("Select * From tbl_produk Where Nama_Produk like'%" & TxtCari.Text & "%'", Conn)
         Rd = Cmd.ExecuteReader
         Rd.Read()
         If Rd.HasRows Then
             Call OpenConn()
-            Da = New MySqlDataAdapter("Select * From tblproduk Where Nama_Produk like'%" & TxtCari.Text & "%'", Conn)
+            Da = New MySqlDataAdapter("Select * From tbl_produk Where Nama_Produk like'%" & TxtCari.Text & "%'", Conn)
             Ds = New DataSet
             Da.Fill(Ds, "KetemuData")
             DgvProduk.DataSource = Ds.Tables("KetemuData")
@@ -104,12 +104,12 @@ Public Class FormProduk
 
     Private Sub TxtCari_TextChanged(sender As Object, e As EventArgs) Handles TxtCari.TextChanged
         Call OpenConn()
-        Cmd = New MySqlCommand("Select * From tblproduk Where Nama_Produk like'%" & TxtCari.Text & "%'", Conn)
+        Cmd = New MySqlCommand("Select * From tbl_produk Where Nama_Produk like'%" & TxtCari.Text & "%'", Conn)
         Rd = Cmd.ExecuteReader
         Rd.Read()
         If Rd.HasRows Then
             Call OpenConn()
-            Da = New MySqlDataAdapter("Select * From tblproduk Where Nama_Produk like'%" & TxtCari.Text & "%'", Conn)
+            Da = New MySqlDataAdapter("Select * From tbl_produk Where Nama_Produk like'%" & TxtCari.Text & "%'", Conn)
             Ds = New DataSet
             Da.Fill(Ds, "KetemuData")
             DgvProduk.DataSource = Ds.Tables("KetemuData")
@@ -118,4 +118,6 @@ Public Class FormProduk
 
         End If
     End Sub
+
+
 End Class

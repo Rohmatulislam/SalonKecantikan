@@ -33,7 +33,12 @@ Partial Class FormMenuUtamaSalon
         Me.ToolStripButton4 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripButton3 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripButton7 = New System.Windows.Forms.ToolStripButton()
+        Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
+        Me.Panel1 = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.Panel2 = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.Panel3 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolStrip1.SuspendLayout()
+        Me.StatusStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'ToolStrip1
@@ -43,7 +48,7 @@ Partial Class FormMenuUtamaSalon
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton5, Me.ToolStripButton8, Me.ToolStripButton2, Me.ToolStripButton6, Me.ToolStripButton1, Me.ToolStripButton9, Me.ToolStripButton4, Me.ToolStripButton3, Me.ToolStripButton7})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(905, 58)
+        Me.ToolStrip1.Size = New System.Drawing.Size(870, 58)
         Me.ToolStrip1.TabIndex = 5
         Me.ToolStrip1.Text = "ToolStrip1"
         '
@@ -116,8 +121,8 @@ Partial Class FormMenuUtamaSalon
         Me.ToolStripButton3.Image = Global.SalonKecantikan.My.Resources.Resources.vfvf_300x300
         Me.ToolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripButton3.Name = "ToolStripButton3"
-        Me.ToolStripButton3.Size = New System.Drawing.Size(108, 53)
-        Me.ToolStripButton3.Text = "TRANSAKSI"
+        Me.ToolStripButton3.Size = New System.Drawing.Size(129, 53)
+        Me.ToolStripButton3.Text = "PEMBAYARAN"
         Me.ToolStripButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
         'ToolStripButton7
@@ -129,13 +134,41 @@ Partial Class FormMenuUtamaSalon
         Me.ToolStripButton7.Text = "LOGOUT"
         Me.ToolStripButton7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
+        'StatusStrip1
+        '
+        Me.StatusStrip1.ImageScalingSize = New System.Drawing.Size(24, 24)
+        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Panel1, Me.Panel2, Me.Panel3})
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 579)
+        Me.StatusStrip1.Name = "StatusStrip1"
+        Me.StatusStrip1.Size = New System.Drawing.Size(870, 32)
+        Me.StatusStrip1.TabIndex = 6
+        Me.StatusStrip1.Text = "StatusStrip1"
+        '
+        'Panel1
+        '
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(102, 25)
+        Me.Panel1.Text = "Kode User :"
+        '
+        'Panel2
+        '
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(68, 25)
+        Me.Panel2.Text = "Nama :"
+        '
+        'Panel3
+        '
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(0, 25)
+        '
         'FormMenuUtamaSalon
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.SalonKecantikan.My.Resources.Resources.WDASF
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(905, 843)
+        Me.ClientSize = New System.Drawing.Size(870, 611)
+        Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.ToolStrip1)
         Me.Name = "FormMenuUtamaSalon"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -143,6 +176,8 @@ Partial Class FormMenuUtamaSalon
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.ToolStrip1.ResumeLayout(False)
         Me.ToolStrip1.PerformLayout()
+        Me.StatusStrip1.ResumeLayout(False)
+        Me.StatusStrip1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -158,4 +193,8 @@ Partial Class FormMenuUtamaSalon
     Friend WithEvents ToolStripButton4 As ToolStripButton
     Friend WithEvents ToolStripButton3 As ToolStripButton
     Friend WithEvents ToolStripButton7 As ToolStripButton
+    Friend WithEvents StatusStrip1 As StatusStrip
+    Friend WithEvents Panel1 As ToolStripStatusLabel
+    Friend WithEvents Panel2 As ToolStripStatusLabel
+    Friend WithEvents Panel3 As ToolStripStatusLabel
 End Class

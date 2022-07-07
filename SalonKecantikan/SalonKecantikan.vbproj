@@ -53,6 +53,7 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.ServiceProcess" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
@@ -78,6 +79,18 @@
     <Compile Include="FormBarang.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FormCustomer.Designer.vb">
+      <DependentUpon>FormCustomer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormCustomer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLayanan.Designer.vb">
+      <DependentUpon>FormLayanan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormLayanan.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormLogin.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -91,10 +104,28 @@
     <Compile Include="FormMenuUtamaSalon.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FormPembayaran.Designer.vb">
+      <DependentUpon>FormPembayaran.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormPembayaran.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPendaftaran.Designer.vb">
+      <DependentUpon>FormPendaftaran.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormPendaftaran.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormProduk.Designer.vb">
       <DependentUpon>FormProduk.vb</DependentUpon>
     </Compile>
     <Compile Include="FormProduk.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormStylist.Designer.vb">
+      <DependentUpon>FormStylist.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormStylist.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormUser.Designer.vb">
@@ -124,14 +155,29 @@
     <EmbeddedResource Include="FormBarang.resx">
       <DependentUpon>FormBarang.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormCustomer.resx">
+      <DependentUpon>FormCustomer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLayanan.resx">
+      <DependentUpon>FormLayanan.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMenuUtamaSalon.resx">
       <DependentUpon>FormMenuUtamaSalon.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormPembayaran.resx">
+      <DependentUpon>FormPembayaran.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPendaftaran.resx">
+      <DependentUpon>FormPendaftaran.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormProduk.resx">
       <DependentUpon>FormProduk.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormStylist.resx">
+      <DependentUpon>FormStylist.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormUser.resx">
       <DependentUpon>FormUser.vb</DependentUpon>

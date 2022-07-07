@@ -23,10 +23,10 @@ Partial Class FormUser
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
+        Me.BtnTutup = New System.Windows.Forms.Button()
+        Me.BtnBatal = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.BtnSimpan = New System.Windows.Forms.Button()
         Me.CmbStatus = New System.Windows.Forms.ComboBox()
         Me.TxtNama = New System.Windows.Forms.TextBox()
         Me.TxtPass = New System.Windows.Forms.TextBox()
@@ -48,23 +48,23 @@ Partial Class FormUser
         Me.DataGridView1.Size = New System.Drawing.Size(845, 367)
         Me.DataGridView1.TabIndex = 8
         '
-        'Button4
+        'BtnTutup
         '
-        Me.Button4.Location = New System.Drawing.Point(391, 295)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(100, 49)
-        Me.Button4.TabIndex = 7
-        Me.Button4.Text = "Button4"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.BtnTutup.Location = New System.Drawing.Point(391, 295)
+        Me.BtnTutup.Name = "BtnTutup"
+        Me.BtnTutup.Size = New System.Drawing.Size(100, 49)
+        Me.BtnTutup.TabIndex = 7
+        Me.BtnTutup.Text = "Tutup"
+        Me.BtnTutup.UseVisualStyleBackColor = True
         '
-        'Button3
+        'BtnBatal
         '
-        Me.Button3.Location = New System.Drawing.Point(263, 256)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(100, 49)
-        Me.Button3.TabIndex = 6
-        Me.Button3.Text = "Button3"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.BtnBatal.Location = New System.Drawing.Point(263, 256)
+        Me.BtnBatal.Name = "BtnBatal"
+        Me.BtnBatal.Size = New System.Drawing.Size(100, 49)
+        Me.BtnBatal.TabIndex = 6
+        Me.BtnBatal.Text = "Batal"
+        Me.BtnBatal.UseVisualStyleBackColor = True
         '
         'Button2
         '
@@ -72,17 +72,17 @@ Partial Class FormUser
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(100, 49)
         Me.Button2.TabIndex = 5
-        Me.Button2.Text = "Button2"
+        Me.Button2.Text = "Hapus"
         Me.Button2.UseVisualStyleBackColor = True
         '
-        'Button1
+        'BtnSimpan
         '
-        Me.Button1.Location = New System.Drawing.Point(12, 256)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(100, 49)
-        Me.Button1.TabIndex = 4
-        Me.Button1.Text = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.BtnSimpan.Location = New System.Drawing.Point(12, 256)
+        Me.BtnSimpan.Name = "BtnSimpan"
+        Me.BtnSimpan.Size = New System.Drawing.Size(100, 49)
+        Me.BtnSimpan.TabIndex = 4
+        Me.BtnSimpan.Text = "Simpan"
+        Me.BtnSimpan.UseVisualStyleBackColor = True
         '
         'CmbStatus
         '
@@ -168,10 +168,10 @@ Partial Class FormUser
         Me.BackgroundImage = Global.SalonKecantikan.My.Resources.Resources.background_abstract_dark_background_wallpaper_preview
         Me.ClientSize = New System.Drawing.Size(869, 774)
         Me.Controls.Add(Me.DataGridView1)
-        Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.Button3)
+        Me.Controls.Add(Me.BtnTutup)
+        Me.Controls.Add(Me.BtnBatal)
         Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.BtnSimpan)
         Me.Controls.Add(Me.CmbStatus)
         Me.Controls.Add(Me.TxtNama)
         Me.Controls.Add(Me.TxtPass)
@@ -190,10 +190,10 @@ Partial Class FormUser
     End Sub
 
     Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents Button4 As Button
-    Friend WithEvents Button3 As Button
+    Friend WithEvents BtnTutup As Button
+    Friend WithEvents BtnBatal As Button
     Friend WithEvents Button2 As Button
-    Friend WithEvents Button1 As Button
+    Friend WithEvents BtnSimpan As Button
     Friend WithEvents CmbStatus As ComboBox
     Friend WithEvents TxtNama As TextBox
     Friend WithEvents TxtPass As TextBox
