@@ -4,6 +4,7 @@ Public Class FormCustomer
         TxtNama.Text = ""
         TxtKode.Text = ""
         TxtAlamat.Text = ""
+        No_HP.Text = ""
         CmbStatusmember.Text = ""
         BtnSimpan.Text = "Input"
         BtnHapus.Text = "Hapus"
